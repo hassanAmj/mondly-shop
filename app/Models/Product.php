@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Brand;
 use App\Models\Category;
 use App\MOdels\ProductImage;
+use App\Models\Supplier;
 
 class Product extends Model
 {
@@ -35,5 +36,9 @@ class Product extends Model
 
     public function images(){
         return $this->hasMany(ProductImage::class);
+    }
+
+    public function suppliers(){
+        return $this->BelongsToMany(Supplier::class)->withPivot('purchase_price','stock')->withTimestamps();
     }
 }
