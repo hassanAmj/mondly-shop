@@ -8,6 +8,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\MOdels\ProductImage;
 use App\Models\Supplier;
+use App\Models\ProductBarcode;
 
 class Product extends Model
 {
@@ -40,5 +41,9 @@ class Product extends Model
 
     public function suppliers(){
         return $this->BelongsToMany(Supplier::class)->withPivot('purchase_price','stock')->withTimestamps();
+    }
+
+    public function productbarcods(){
+        return $this->hasMany(ProductBarcode::class);
     }
 }
