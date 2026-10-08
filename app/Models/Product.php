@@ -11,6 +11,7 @@ use App\Models\Supplier;
 use App\Models\ProductBarcode;
 use App\Models\CustomerProductPrice;
 use App\Models\SalesChannelProductPrice;
+use App\Models\ProductPriceHistory;
 
 class Product extends Model
 {
@@ -56,4 +57,10 @@ class Product extends Model
     public function salesChannelPrices(){
         return $this->hasMany(SalesChannelProductPrice::class);
     }
+
+    public function priceHistories(){
+        return $this->hasMany(ProductPriceHistory::class);
+    }
+
+
 }

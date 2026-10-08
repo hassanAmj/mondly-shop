@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Customer;
 use App\Models\User;
 use App\Models\CustomerProductPrice;
+use App\Models\ProductPriceHistory;
 
 class Customer extends Model
 {
@@ -24,6 +25,10 @@ class Customer extends Model
 
     public function productprices(){
         return $this->hasMany(CustomerProductPrice::class);
+    }
+
+        public function priceHistories(){
+        return $this->hasMany(ProductPriceHistory::class);
     }
 
 
