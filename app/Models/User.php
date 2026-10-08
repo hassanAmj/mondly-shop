@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Role;
 use App\Models\Supplier;
+use App\Models\Customer;
 
 #[Fillable(['name', 'email', 'password'])]
 #[Hidden(['password', 'remember_token'])]
@@ -39,6 +40,11 @@ class User extends Authenticatable
 
     public function supplier(){
         return $this->hasOne(Supplier::class);
+    }
+
+    public function customer()
+    {
+        return $this->hasOne(Customer::class);
     }
 
 }

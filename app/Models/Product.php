@@ -9,6 +9,8 @@ use App\Models\Category;
 use App\MOdels\ProductImage;
 use App\Models\Supplier;
 use App\Models\ProductBarcode;
+use App\Models\CustomerProductPrice;
+use App\Models\SalesChannelProductPrice;
 
 class Product extends Model
 {
@@ -45,5 +47,13 @@ class Product extends Model
 
     public function productbarcods(){
         return $this->hasMany(ProductBarcode::class);
+    }
+
+    public function customerprices(){
+        return $this->hasMany(CustomerProductPrice::class);
+    }
+
+    public function salesChannelPrices(){
+        return $this->hasMany(SalesChannelProductPrice::class);
     }
 }
