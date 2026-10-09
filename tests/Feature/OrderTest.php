@@ -40,7 +40,7 @@ class OrderTest extends TestCase
             'slug' => 'air-fryer',
             'sku' => 'AF-001',
             'purchase_price' => 10000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
             'stock' => 10,
         ]);
 
@@ -51,7 +51,7 @@ class OrderTest extends TestCase
             'slug' => 'chopper',
             'sku' => 'CH-001',
             'purchase_price' => 2000000,
-            'sale_price' => 2700000,
+            'retail_price' => 2700000,
             'stock' => 5,
         ]);
 
@@ -126,7 +126,7 @@ class OrderTest extends TestCase
             'slug' => 'air-fryer',
             'sku' => 'AF-TEST-003',
             'purchase_price' => 10000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
             'stock' => 10,
         ]);
 
@@ -176,7 +176,7 @@ class OrderTest extends TestCase
                 'slug' => 'air-fryer',
                 'sku' => 'AF-TEST-004',
                 'purchase_price' => 10000000,
-                'sale_price' => 14000000,
+                'retail_price' => 14000000,
                 'stock' => 10,
             ]);
 
@@ -245,7 +245,7 @@ class OrderTest extends TestCase
             'slug' => 'air-fryer',
             'sku' => 'AF-TEST-005',
             'purchase_price' => 10000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
             'stock' => 10,
         ]);
 
@@ -274,7 +274,7 @@ class OrderTest extends TestCase
         ]);
 
         $product->update([
-            'sale_price' => 15000000,
+            'retail_price' => 15000000,
         ]);
 
         $this->assertEquals(
@@ -284,7 +284,7 @@ class OrderTest extends TestCase
 
         $this->assertEquals(
             15000000,
-            (float) $product->fresh()->sale_price
+            (float) $product->fresh()->retail_price
         );
     }
 
@@ -312,7 +312,7 @@ class OrderTest extends TestCase
             'slug' => 'air-fryer',
             'sku' => 'AF-TEST-006',
             'purchase_price' => 10000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
             'stock' => 10,
         ]);
 

@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('sku')->unique();
             $table->text('description')->nullable();
             $table->decimal('purchase_price', 15,2);
-            $table->decimal('sale_price', 15,2);
+            $table->decimal('retail_price', 15,2);
+            $table->decimal('wholesale_price', 15,2)->default(0);
             $table->unsignedInteger('stock')->default(0);
             $table->boolean('is_active')->default(true);
             $table->timestamps();

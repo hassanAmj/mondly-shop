@@ -32,7 +32,7 @@ class SupplierProductTest extends TestCase
             'slug' => 'gosonic-air-fryer-869',
             'sku' => 'GOS-869',
             'purchase_price' => 1200000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
             'stock' => 10,
             'is_active' => true,
         ]); 
@@ -83,7 +83,7 @@ class SupplierProductTest extends TestCase
             'slug' => 'gosonic-air-fryer-869',
             'sku' => 'GOS-869',
             'purchase_price' => 1200000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
             'stock' => 10,
             'is_active' => true,
         ]); 
@@ -123,7 +123,7 @@ class SupplierProductTest extends TestCase
             'slug' => 'gosonic-air-fryer-869',
             'sku' => 'GOS-869',
             'purchase_price' => 1200000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
             'stock' => 10,
             'is_active' => true,
         ]); 
@@ -136,6 +136,7 @@ class SupplierProductTest extends TestCase
         $supplierProduct = $product->suppliers->first();
 
         $this->assertEquals(
+
             13000000,
             $supplierProduct->pivot->purchase_price
         );

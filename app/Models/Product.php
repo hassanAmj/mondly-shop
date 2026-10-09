@@ -26,7 +26,8 @@ class Product extends Model
         'sku',
         'description',
         'purchase_price',
-        'sale_price',
+        'retail_price',
+        'wholesale_price',
         'stock',
         'is_active',
     ];

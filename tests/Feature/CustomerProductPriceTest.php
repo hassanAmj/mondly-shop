@@ -42,7 +42,7 @@ class CustomerProductPriceTest extends TestCase
             'slug' => 'gosonic-air-fryer-869',
             'sku' => 'GOS-869',
             'purchase_price' => 1200000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
         ]); 
 
         $specificPrice = CustomerProductPrice::create([
@@ -81,7 +81,7 @@ class CustomerProductPriceTest extends TestCase
             'slug' => 'gosonic-air-fryer-869',
             'sku' => 'GOS-869',
             'purchase_price' => 1200000000,
-            'sale_price' => 14000000,
+            'retail_price' => 14000000,
         ]); 
 
         $specificPrice = CustomerProductPrice::create([
@@ -120,7 +120,7 @@ class CustomerProductPriceTest extends TestCase
             'slug' => 'gosonic-air-fryer-869',
             'sku' => 'GOS-869',
             'purchase_price' => 1200000000,
-            'sale_price' => 15000000,
+            'retail_price' => 15000000,
         ]); 
 
         CustomerProductPrice::create([
