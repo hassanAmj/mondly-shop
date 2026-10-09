@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 
 use App\Models\Brand;
 use App\Models\Category;
@@ -62,5 +65,9 @@ class Product extends Model
         return $this->hasMany(ProductPriceHistory::class);
     }
 
+    public function orderItems():HasMany
+    {
+        return $this->hasMany(OrderItem::class);
+    }
 
 }

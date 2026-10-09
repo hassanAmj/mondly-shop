@@ -7,6 +7,7 @@ use App\Models\Customer;
 use App\Models\User;
 use App\Models\CustomerProductPrice;
 use App\Models\ProductPriceHistory;
+use App\Models\Order;
 
 class Customer extends Model
 {
@@ -31,5 +32,7 @@ class Customer extends Model
         return $this->hasMany(ProductPriceHistory::class);
     }
 
-
+    public function orders(){
+       return $this->hasMany(Order::class);
+    }
 }
